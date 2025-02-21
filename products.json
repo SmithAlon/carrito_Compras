@@ -1,0 +1,16 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Camisa blanca",
+        "price": 180,
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/008/534/684/small/white-t-shirt-mockup-cutout-file-png.png"
+      },
+      {
+        "id": 2,
+        "name": "Guantes de tela",
+        "price": 100,
+        "image": "https://kingglove.com/wp-content/uploads/2021/06/T800HC_W.png"
+      }
+    ]
+  }
