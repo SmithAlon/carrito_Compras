@@ -34,7 +34,6 @@ class ShoppingCart {
     }
 
     init() {
-        // Add event listeners to all add-to-cart buttons
         document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', (e) => {
                 const card = e.target.closest('.product-card');
@@ -63,16 +62,16 @@ class ShoppingCart {
         const cartItems = document.getElementById('cartItems');
         const totalElement = document.getElementById('total');
         
-        // Clear current cart items
+        // Limpiar los artículos actuales del carrito
         cartItems.innerHTML = '';
         
-        // Calculate new total
+        // Calcular el nuevo total
         this.total = this.items.reduce((sum, item) => sum + item.price, 0);
         
-        // Update total display
+        // Actualizar la visualización del total
         totalElement.textContent = this.total;
         
-        // Add each item to cart
+        // Añadir cada artículo al carrito
         this.items.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.className = 'cart-item';
@@ -87,7 +86,7 @@ class ShoppingCart {
             
             cartItems.appendChild(cartItem);
             
-            // Add remove button listener
+            // Añadir listener al botón de eliminar
             cartItem.querySelector('.remove-item').addEventListener('click', () => {
                 this.removeItem(index);
             });
@@ -95,7 +94,7 @@ class ShoppingCart {
     }
 }
 
-// Initialize shopping cart when page loads
+// Crear una instancia de la clase ShoppingCart
 document.addEventListener('DOMContentLoaded', () => {
     new ShoppingCart();
 });
